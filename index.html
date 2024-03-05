@@ -9,7 +9,7 @@
     <script src="jspsych/dist/plugin-instructions.js"></script>
     <script src="jspsych/dist/plugin-survey.js"></script>
     <link href="jspsych/dist/jspsych.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/rat_styles.css">
+    <link rel="stylesheet" href="css/task.css">
     <script src="scripts/helper_function.js"></script>
     <script src="scripts/task.js"></script>
     <script src="scripts/setup.js"></script>
@@ -44,11 +44,11 @@
           correct_feedback = "Richtig (vielleicht Punkte?)";
         }
         if (last_trial_correct) {
-          feedback_msg = add_lower_div(`<p class = "feedback-stim"><span style = "color: green">${correct_feedback}</span></p>`);
+          feedback_msg = `<p class = "feedback-stim"><span style = "color: green">${correct_feedback}</span></p>`;
         } else if (last_response == null){
-          feedback_msg = add_lower_div(`<p class = "feedback-stim"><span style = "color: red">${false_feedback}</span></p>`); 
+          feedback_msg = `<p class = "feedback-stim"><span style = "color: red">${false_feedback}</span></p>`; 
         } else {
-          feedback_msg = add_lower_div(`<p class = "feedback-stim"><span style = "color: red">${false_feedback}</span></p>`); 
+          feedback_msg = `<p class = "feedback-stim"><span style = "color: red">${false_feedback}</span></p>`; 
         }
         return feedback_msg
       },
